@@ -33,17 +33,17 @@ useEffect(()=>{
   const convertToCurentValue = (currentValue * convertValueCountry).toFixed(2)
   console.log(convertToCurentValue);
   
-  setConvertValue(convertToCurentValue)
-},[currentValue,currentCountry])
+  setConvertValue(Number(convertToCurentValue))
+})
 
   
 
   return (
     <Stack style={{width:"100%"}}>
+      Курс валют
      <TextInput
       type="number"
       placeholder="1000"
-      label="Transfer amount"
       value={currentValue}
       onChange={(e: any)=> setCurrentValue(e.target.value)}
       rightSection={<Select value={currentCountry} onChange={(e: any)=> setCurrentCountry(e.target.value)}
@@ -53,7 +53,6 @@ useEffect(()=>{
    <TextInput
       type="number"
       placeholder="1000"
-      label="Transfer amount"
       value={convertValue}
       rightSection={<Select value={convertCountry} onChange={(e: any)=> setConvertCountry(e.target.value)}
       data={country}/>}
