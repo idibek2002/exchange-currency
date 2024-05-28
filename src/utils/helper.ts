@@ -1,0 +1,1 @@
+export const BASE_URL = "https://v6.exchangerate-api.com/v6/edd3180f412d5f2d5af3a862/"
